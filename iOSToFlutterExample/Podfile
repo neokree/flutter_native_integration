@@ -1,0 +1,21 @@
+platform :ios, '10.0'
+
+target 'iOSToFlutterExample' do
+  use_frameworks!
+
+  # Pods for iOSToFlutterExample
+
+  target 'iOSToFlutterExampleTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'iOSToFlutterExampleUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+
+ flutter_application_path = __dir__ + '/../flutter_module/'
+ eval(File.read(File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')), binding)
